@@ -50,14 +50,10 @@ jobs:
     - name: Install Python dependencies
       run: |
         source ${{ env.VENV_DIR }}/activate
-        if [ -f "${{ env.REQUIREMENTS_FILE }}" ]; then
-          pip install -r ${{ env.REQUIREMENTS_FILE }}
-        else
-          pip install fontmake
-        fi
+        pip install fontmake pysilfont
 
     # ------------------------------------------------------------------
-    # STEP 1: BUILD UFO (if building from SFD)
+    # STEP 1: Convert SFD → UFO
     # ------------------------------------------------------------------
     - name: Convert SFD to UFO (only for SFD build)
       if: ${{ inputs.build_type == 'sfd' }}
@@ -76,6 +72,9 @@ jobs:
         fontforge -lang=ff -c "Open('${{ env.SFD_FILE }}'); Generate('${{ env.UFO_FILE }}', '', 64)"
         echo "Conversion complete."
 
+    # ------------------------------------------------------------------
+    # STEP 2: Ensure UFO exists
+    # ------------------------------------------------------------------
     - name: Validate UFO exists
       run: |
         if [ ! -d "${{ env.UFO_FILE }}" ]; then
@@ -85,7 +84,18 @@ jobs:
         echo "UFO found: ${{ env.UFO_FILE }}"
 
     # ------------------------------------------------------------------
-    # STEP 2: COMBINE FEA (AFTER UFO EXISTS)
+    # STEP 3: NORMALIZE UFO (pysilfont)
+    # ------------------------------------------------------------------
+    - name: Normalize UFO using pysilfont (psfnormalize)
+      run: |
+        source ${{ env.VENV_DIR }}/activate
+
+        echo "Normalizing UFO with pysilfont (psfnormalize)..."
+        psfnormalize "${{ env.UFO_FILE }}" --mkbackup=False --quiet
+        echo "UFO normalization complete."
+
+    # ------------------------------------------------------------------
+    # STEP 4: Combine FEA (AFTER normalization)
     # ------------------------------------------------------------------
     - name: Combine FEA files into UFO
       run: |
@@ -118,7 +128,7 @@ jobs:
         echo "FEA merge complete."
 
     # ------------------------------------------------------------------
-    # STEP 3: BUILD FONT
+    # STEP 5: BUILD OTF
     # ------------------------------------------------------------------
     - name: Build OTF from UFO
       run: |
@@ -127,7 +137,7 @@ jobs:
         echo "OTF build complete."
 
     # ------------------------------------------------------------------
-    # STEP 4: ARTIFACTS
+    # STEP 6: Upload artifacts
     # ------------------------------------------------------------------
     - name: Upload artifacts
       uses: actions/upload-artifact@v4
