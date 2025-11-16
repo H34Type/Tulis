@@ -1,19 +1,18 @@
-# .github/workflows/build-font.yml
 name: Build Font
 
 on:
   workflow_dispatch:
     inputs:
       build_type:
-        description: 'Build type'
+        description: "Build type"
         required: true
-        default: 'sfd'
+        default: "sfd"
         type: choice
         options:
-        - sfd
-        - ufo
+          - sfd
+          - ufo
       debug_mode:
-        description: 'Enable debug output'
+        description: "Enable debug output"
         required: false
         default: false
         type: boolean
@@ -28,7 +27,7 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
-    
+
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
@@ -36,7 +35,7 @@ jobs:
     - name: Setup Python
       uses: actions/setup-python@v5
       with:
-        python-version: '3.x'
+        python-version: "3.x"
 
     - name: Install system dependencies
       run: |
@@ -47,107 +46,89 @@ jobs:
       run: |
         python -m venv build
         source ${{ env.VENV_DIR }}/activate
-        echo "Virtual environment created and activated."
 
     - name: Install Python dependencies
       run: |
         source ${{ env.VENV_DIR }}/activate
         if [ -f "${{ env.REQUIREMENTS_FILE }}" ]; then
-          echo "Installing requirements from ${{ env.REQUIREMENTS_FILE }}..."
           pip install -r ${{ env.REQUIREMENTS_FILE }}
         else
-          echo "${{ env.REQUIREMENTS_FILE }} not found. Installing fontmake..."
           pip install fontmake
         fi
 
-    - name: Combine FEA files (for both SFD and UFO builds)
-      run: |
-        source ${{ env.VENV_DIR }}/activate
-        if [ -d "${{ env.FEA_DIR }}" ]; then
-          echo "Combining .fea files from ${{ env.FEA_DIR }}/ ..."
-          
-          # Create a temporary combined features content
-          temp_combined="/tmp/combined_features_temp.fea"
-          > "$temp_combined"  # Clear the temporary file
-
-          # Add header comment
-          echo "# Combined feature file - Auto-generated from modular .fea files" >> "$temp_combined"
-          echo "# Generated on: $(date)" >> "$temp_combined"
-          echo "" >> "$temp_combined"
-
-          # Process each .fea file in alphabetical order
-          for fea_file in "${{ env.FEA_DIR }}"/*.fea; do
-            if [ -f "$fea_file" ]; then
-              echo "  Adding: $(basename "$fea_file")"
-              echo "# === From: $(basename "$fea_file") ===" >> "$temp_combined"
-              cat "$fea_file" >> "$temp_combined"
-              echo "" >> "$temp_combined"
-            fi
-          done
-
-          # If UFO features file exists, append combined features to it
-          UFO_FEATURES_FILE="${{ env.UFO_FILE }}/features.fea"
-          if [ -f "$UFO_FEATURES_FILE" ]; then
-            echo "Appending combined features to existing UFO features..."
-
-            # Create backup of original features
-            cp "$UFO_FEATURES_FILE" "$UFO_FEATURES_FILE.bak"
-
-            # Append combined features to existing UFO features
-            echo "" >> "$UFO_FEATURES_FILE"  # Add spacing
-            echo "# === Combined modular features (added by build script) ===" >> "$UFO_FEATURES_FILE"
-            echo "# Added on: $(date)" >> "$UFO_FEATURES_FILE"
-            echo "" >> "$UFO_FEATURES_FILE"
-            cat "$temp_combined" >> "$UFO_FEATURES_FILE"
-          else
-            # If no existing features file, create one with combined features
-            echo "Creating new UFO features file with combined features..."
-            mkdir -p "${{ env.UFO_FILE }}"
-            cp "$temp_combined" "$UFO_FEATURES_FILE"
-          fi
-
-          # Clean up temporary file
-          rm "$temp_combined"
-          echo "UFO features updated with modular features."
-        else
-          echo "Warning: ${{ env.FEA_DIR }} directory not found. Skipping .fea combination."
-        fi
-
-    - name: Convert SFD to UFO
+    # ------------------------------------------------------------------
+    # STEP 1: BUILD UFO (if building from SFD)
+    # ------------------------------------------------------------------
+    - name: Convert SFD to UFO (only for SFD build)
       if: ${{ inputs.build_type == 'sfd' }}
       run: |
         source ${{ env.VENV_DIR }}/activate
-        echo "Converting ${{ env.SFD_FILE }} → ${{ env.UFO_FILE }} ..."
-        if [ -f "${{ env.SFD_FILE }}" ]; then
-          fontforge -lang=ff -c "Open('${{ env.SFD_FILE }}'); Generate('${{ env.UFO_FILE }}', '', 64)"
-          echo "Conversion complete: ${{ env.UFO_FILE }} updated with combined features."
-        else
-          echo "Error: ${{ env.SFD_FILE }} not found!"
+
+        if [ ! -f "${{ env.SFD_FILE }}" ]; then
+          echo "ERROR: SFD source file missing"
           exit 1
         fi
 
-    - name: Validate UFO file exists (for UFO build)
-      if: ${{ inputs.build_type == 'ufo' }}
+        echo "Cleaning old UFO directory..."
+        rm -rf "${{ env.UFO_FILE }}"
+
+        echo "Converting SFD → UFO..."
+        fontforge -lang=ff -c "Open('${{ env.SFD_FILE }}'); Generate('${{ env.UFO_FILE }}', '', 64)"
+        echo "Conversion complete."
+
+    - name: Validate UFO exists
       run: |
         if [ ! -d "${{ env.UFO_FILE }}" ]; then
-          echo "Error: ${{ env.UFO_FILE }} not found!"
+          echo "ERROR: UFO directory not found!"
           exit 1
-        else
-          echo "Found UFO file: ${{ env.UFO_FILE }}"
+        fi
+        echo "UFO found: ${{ env.UFO_FILE }}"
+
+    # ------------------------------------------------------------------
+    # STEP 2: COMBINE FEA (AFTER UFO EXISTS)
+    # ------------------------------------------------------------------
+    - name: Combine FEA files into UFO
+      run: |
+        source ${{ env.VENV_DIR }}/activate
+
+        UFO_FEATURES_FILE="${{ env.UFO_FILE }}/features.fea"
+
+        echo "Combining FEA files..."
+
+        temp_combined="/tmp/combined_features_temp.fea"
+        > "$temp_combined"
+
+        echo "# Combined feature file" >> "$temp_combined"
+        echo "# Generated on: $(date)" >> "$temp_combined"
+        echo "" >> "$temp_combined"
+
+        if [ -d "${{ env.FEA_DIR }}" ]; then
+          for fea in "${{ env.FEA_DIR }}"/*.fea; do
+            [ -f "$fea" ] || continue
+            echo "# From: $(basename "$fea")" >> "$temp_combined"
+            cat "$fea" >> "$temp_combined"
+            echo "" >> "$temp_combined"
+          done
         fi
 
+        echo "Appending combined FEA → UFO..."
+        cat "$temp_combined" >> "$UFO_FEATURES_FILE"
+
+        rm "$temp_combined"
+        echo "FEA merge complete."
+
+    # ------------------------------------------------------------------
+    # STEP 3: BUILD FONT
+    # ------------------------------------------------------------------
     - name: Build OTF from UFO
       run: |
         source ${{ env.VENV_DIR }}/activate
-        echo "Building OTF from ${{ env.UFO_FILE }} ..."
-        if [ -d "${{ env.UFO_FILE }}" ]; then
-          fontmake -u "${{ env.UFO_FILE }}" -o otf --keep-overlaps
-          echo "OTF build complete."
-        else
-          echo "Error: ${{ env.UFO_FILE }} not found!"
-          exit 1
-        fi
+        fontmake -u "${{ env.UFO_FILE }}" -o otf --keep-overlaps
+        echo "OTF build complete."
 
+    # ------------------------------------------------------------------
+    # STEP 4: ARTIFACTS
+    # ------------------------------------------------------------------
     - name: Upload artifacts
       uses: actions/upload-artifact@v4
       with:
