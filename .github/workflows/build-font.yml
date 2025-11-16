@@ -19,8 +19,8 @@ on:
         type: boolean
 
 env:
-  SFD_FILE: "H34-Tulis.sfd"
-  UFO_FILE: "H34-Tulis.ufo"
+  SFD_FILE: "sources/H34-Tulis.sfd"
+  UFO_FILE: "sources/H34-Tulis.ufo"
   VENV_DIR: "build/bin"
   FEA_DIR: "fea"
   REQUIREMENTS_FILE: "requirements.txt"
