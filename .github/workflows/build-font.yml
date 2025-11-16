@@ -90,7 +90,7 @@ jobs:
         source ${{ env.VENV_DIR }}/activate
 
         echo "Normalizing UFO with pysilfont (psfnormalize)..."
-        psfnormalize "${{ env.UFO_FILE }}" --mkbackup=False --quiet
+        psfnormalize "${{ env.UFO_FILE }}"
         echo "UFO normalization complete."
 
     # ------------------------------------------------------------------
