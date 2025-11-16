@@ -50,7 +50,7 @@ jobs:
     - name: Install Python dependencies
       run: |
         source ${{ env.VENV_DIR }}/activate
-        pip install fontmake pysilfont
+        pip install fontmake silfont
 
     # ------------------------------------------------------------------
     # STEP 1: Convert SFD → UFO
