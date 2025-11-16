@@ -136,18 +136,20 @@ jobs:
         echo "OTF build complete."
 
     # ------------------------------------------------------------------
-    # STEP 6: Upload artifacts
+    # STEP 6: Upload artifacts separately
     # ------------------------------------------------------------------
-    - name: Upload artifacts
+    - name: Upload OTF artifacts
       uses: actions/upload-artifact@v4
       with:
-        name: font-files-${{ github.run_number }}-${{ inputs.build_type }}
+        name: otf-fonts-${{ github.run_number }}-${{ inputs.build_type }}
         path: |
           master_otf/*.otf
-          ${{ env.UFO_FILE }}/
         retention-days: 30
-
-    - name: List generated files
-      run: |
-        ls -la *.otf || echo "No OTF files found"
-        ls -la ${{ env.UFO_FILE }}/ || echo "No UFO directory found"
+    
+    - name: Upload UFO artifact
+      if: ${{ inputs.build_type == 'sfd' || inputs.build_type == 'ufo' }}
+      uses: actions/upload-artifact@v4
+      with:
+        name: ufo-source-${{ github.run_number }}-${{ inputs.build_type }}
+        path: ${{ env.UFO_FILE }}/
+        retention-days: 30
