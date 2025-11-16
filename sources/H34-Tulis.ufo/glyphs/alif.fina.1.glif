@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="alif.fina.1" format="2">
+  <advance width="210"/>
+  <anchor x="129" y="1465" name="atas"/>
+  <anchor x="209" y="-116.996" name="bawah"/>
+  <outline>
+    <contour>
+      <point x="210" y="0" type="line"/>
+      <point x="153.395" y="864.437" type="line"/>
+      <point x="140.083" y="861.216" type="line"/>
+      <point x="140.083" y="861.216"/>
+      <point x="38.002" y="648.682"/>
+      <point x="40.417" y="634.792" type="curve" smooth="yes"/>
+      <point x="61.9639" y="419.926"/>
+      <point x="123.665" y="0"/>
+      <point x="123.665" y="0" type="curve"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.fontlab.hintData</key>
+      <dict>
+        <key>hhints</key>
+        <array>
+          <dict>
+            <key>position</key>
+            <integer>0</integer>
+            <key>width</key>
+            <integer>140</integer>
+          </dict>
+        </array>
+        <key>vhints</key>
+        <array>
+          <dict>
+            <key>position</key>
+            <integer>146</integer>
+            <key>width</key>
+            <integer>334</integer>
+          </dict>
+        </array>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

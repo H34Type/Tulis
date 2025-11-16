@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="ttx1xa" format="2">
+  <advance width="293"/>
+  <unicode hex="FBB2"/>
+  <anchor x="175" y="0" name="_titik_atas"/>
+  <outline>
+    <contour>
+      <point x="118.764" y="197.023" type="curve"/>
+      <point x="243.238" y="119.996" type="line"/>
+      <point x="231.241" y="101.632"/>
+      <point x="208.241" y="64.9648"/>
+      <point x="174.238" y="9.99512" type="curve"/>
+      <point x="164.108" y="16.0645"/>
+      <point x="122.616" y="40.4072"/>
+      <point x="49.7607" y="83.0225" type="curve"/>
+      <point x="81.3066" y="135.592"/>
+      <point x="104.308" y="173.593"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.fontlab.hintData</key>
+      <dict>
+        <key>hhints</key>
+        <array>
+          <dict>
+            <key>position</key>
+            <integer>10</integer>
+            <key>width</key>
+            <integer>187</integer>
+          </dict>
+        </array>
+        <key>vhints</key>
+        <array>
+          <dict>
+            <key>position</key>
+            <integer>50</integer>
+            <key>width</key>
+            <integer>193</integer>
+          </dict>
+        </array>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

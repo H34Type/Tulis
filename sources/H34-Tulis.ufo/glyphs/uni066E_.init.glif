@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uni066E.init" format="2">
+  <advance width="325"/>
+  <anchor x="152" y="658.004" name="titik_atas"/>
+  <anchor x="188" y="-144.996" name="titik_bawah"/>
+  <anchor x="238" y="655.004" name="atas"/>
+  <anchor x="162" y="-94.9961" name="bawah"/>
+  <anchor x="118" y="-144.996" name="cincin"/>
+  <outline>
+    <contour>
+      <point x="204.784" y="547.842" type="curve"/>
+      <point x="191.522" y="544.633" type="line"/>
+      <point x="160.711" y="491.775"/>
+      <point x="136.603" y="442.321"/>
+      <point x="124.42" y="415" type="curve"/>
+      <point x="124.42" y="415"/>
+      <point x="224.419" y="263.99"/>
+      <point x="224.419" y="140.002" type="curve"/>
+      <point x="24.4199" y="140" type="line"/>
+      <point x="0" y="140" type="line"/>
+      <point x="-32.5537" y="107.439" type="line"/>
+      <point x="-32.5537" y="-0.00195312" type="line"/>
+      <point x="24.4199" y="-0.00195312" type="line"/>
+      <point x="256.42" y="0" type="line"/>
+      <point x="282.106" y="78.0186"/>
+      <point x="300.418" y="164.743"/>
+      <point x="300.418" y="244" type="curve" smooth="yes"/>
+      <point x="300.418" y="353.071"/>
+      <point x="225.795" y="506.988"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.fontlab.hintData</key>
+      <dict>
+        <key>vhints</key>
+        <array>
+          <dict>
+            <key>position</key>
+            <integer>224</integer>
+            <key>width</key>
+            <integer>76</integer>
+          </dict>
+        </array>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

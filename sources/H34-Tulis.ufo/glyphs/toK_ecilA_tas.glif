@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="toKecilAtas" format="2">
+  <advance width="560"/>
+  <unicode hex="0615"/>
+  <unicode hex="FBC1"/>
+  <unicode hex="FBC1"/>
+  <anchor x="277" y="0" name="_atas"/>
+  <outline>
+    <contour>
+      <point x="246.16" y="405.36" type="line"/>
+      <point x="246.16" y="273.601" type="line"/>
+      <point x="497.439" y="273.601" type="line"/>
+      <point x="497.439" y="237.601" type="line"/>
+      <point x="532.72" y="237.601" type="line"/>
+      <point x="532.72" y="0" type="line"/>
+      <point x="27.2803" y="0" type="line"/>
+      <point x="27.2803" y="104.4" type="line"/>
+      <point x="141.04" y="104.4" type="line"/>
+      <point x="141.04" y="405.36" type="line"/>
+      <point x="193.6" y="405.36" type="line"/>
+    </contour>
+    <contour>
+      <point x="246.88" y="104.4" type="line"/>
+      <point x="428.32" y="104.4" type="line"/>
+      <point x="428.32" y="167.761" type="line"/>
+      <point x="404.56" y="167.761" type="line"/>
+      <point x="351.28" y="167.761" type="line"/>
+      <point x="280.72" y="167.761" type="line"/>
+      <point x="246.88" y="167.761" type="line"/>
+      <point x="246.88" y="136.08" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.fontlab.hintData</key>
+      <dict>
+        <key>hhints</key>
+        <array>
+          <dict>
+            <key>position</key>
+            <integer>0</integer>
+            <key>width</key>
+            <integer>104</integer>
+          </dict>
+          <dict>
+            <key>position</key>
+            <integer>168</integer>
+            <key>width</key>
+            <integer>106</integer>
+          </dict>
+        </array>
+        <key>vhints</key>
+        <array>
+          <dict>
+            <key>position</key>
+            <integer>141</integer>
+            <key>width</key>
+            <integer>105</integer>
+          </dict>
+          <dict>
+            <key>position</key>
+            <integer>428</integer>
+            <key>width</key>
+            <integer>104</integer>
+          </dict>
+        </array>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

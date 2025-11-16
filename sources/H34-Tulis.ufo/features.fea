@@ -1,0 +1,1182 @@
+# GDEF Mark Attachment Classes
+@tt_atas=[\ttx1xa \ttx2xa \ttx3xa \ttx3Axa \ttx4xa \ttx2Axa ];
+@tt_bawah=[\ttx1xb \ttx2xb \ttx3xb \ttx3Axb \ttx4xb \ttx2Axb ];
+
+languagesystem DFLT dflt;
+languagesystem arab dflt;
+languagesystem arab URD ;
+languagesystem cyrl dflt;
+languagesystem latn dflt;
+
+
+# GSUB 
+
+
+lookup isolMultipleIsolatedFormslookup0 {
+  lookupflag 0;
+    sub \nya by \uni06BA \ttx3xa ;
+} isolMultipleIsolatedFormslookup0;
+
+lookup ccmpGabungCincinDot {
+  lookupflag 0;
+    sub \hamzahKecilAtas by \uni25CC \hamzahKecilAtas ;
+    sub \hamzahKecilBawah by \uni25CC \hamzahKecilBawah ;
+    sub \toKecilBawah by \uni25CC \toKecilBawah ;
+    sub \toKecilAtas by \uni25CC \toKecilAtas ;
+    sub \cincinKecil by \uni25CC \cincinKecil ;
+    sub \ttx1xb by \uni25CC \ttx1xb ;
+    sub \ttx2xb by \uni25CC \ttx2xb ;
+    sub \ttx3xb by \uni25CC \ttx3xb ;
+    sub \ttx4xb by \uni25CC \ttx4xb ;
+    sub \ttx2Axb by \uni25CC \ttx2Axb ;
+    sub \ttx3Axb by \uni25CC \ttx3Axb ;
+    sub \ttx1xa by \uni25CC \ttx1xa ;
+    sub \ttx2xa by \uni25CC \ttx2xa ;
+    sub \ttx3xa by \uni25CC \ttx3xa ;
+    sub \ttx4xa by \uni25CC \ttx4xa ;
+    sub \ttx2Axa by \uni25CC \ttx2Axa ;
+    sub \ttx3Axa by \uni25CC \ttx3Axa ;
+} ccmpGabungCincinDot;
+
+lookup ccmpGabungBentuk {
+  lookupflag 0;
+    sub \uniFEFB by \lam.init \alif.fina ;
+    sub \uniFEFC by \lam.medi \alif.fina ;
+    sub \alif-hamzahAtas by \alif \hamzahKecilAtas ;
+    sub \alif-hamzahBawah by \alif \hamzahKecilBawah ;
+} ccmpGabungBentuk;
+
+lookup ccmpGabungTitik {
+  lookupflag RightToLeft;
+    sub \ta_bulat by \ha_bulat \ttx2xa ;
+    sub \va by \wau \ttx1xa ;
+    sub \ya by \ye_maksurah \ttx2xb ;
+    sub \uni06B5 by \lam \tandaVAtas ;
+    sub \uni06B6 by \lam \ttx1xa ;
+    sub \uni06B7 by \lam \ttx3xa ;
+    sub \uni06B8 by \lam \ttx3Axb ;
+    sub \uni06B9 by \uni06BA \ttx1xa \ttx1xb ;
+    sub \uni06BB by \uni06BA \toKecilAtas ;
+    sub \uni06BC by \uni06BA \ttx1xa \cincinKecil ;
+    sub \nun by \uni06BA \ttx1xa ;
+    sub \uni069A by \sin \ttx1xa \ttx1xb ;
+    sub \uni069B by \sin \ttx3Axb ;
+    sub \uni069C by \sin \ttx3xa \ttx3Axb ;
+    sub \syin by \sin \ttx3xa ;
+    sub \uni069F by \to \ttx3xa ;
+    sub \za by \to \ttx1xa ;
+    sub \uni069D by \sod \ttx2xb ;
+    sub \uni069E by \sod \ttx3xa ;
+    sub \dod by \sod \ttx1xa ;
+    sub \uni0691 by \ra \toKecilAtas ;
+    sub \uni0692 by \ra \tandaVAtas ;
+    sub \uni0693 by \ra \cincinKecil ;
+    sub \uni0694 by \ra \ttx1xb ;
+    sub \uni0695 by \ra \tandaVBawah ;
+    sub \uni0696 by \ra \ttx1xa \ttx1xb ;
+    sub \uni0697 by \ra \ttx2xa ;
+    sub \uni0698 by \ra \ttx3xa ;
+    sub \uni0699 by \ra \ttx4xa ;
+    sub \zai by \ra \ttx1xa ;
+    sub \uni0688 by \dal \toKecilAtas ;
+    sub \uni0689 by \dal \cincinKecil ;
+    sub \uni068A by \dal \ttx1xb ;
+    sub \uni068B by \dal \ttx1xb \toKecilAtas ;
+    sub \uni068C by \dal \ttx2xa ;
+    sub \uni068D by \dal \ttx2xb ;
+    sub \uni068E by \dal \ttx3xa ;
+    sub \uni068F by \dal \ttx3Axa ;
+    sub \uni0690 by \dal \ttx4xa ;
+    sub \zal by \dal \ttx1xa ;
+    sub \uni066E by \uni066E ;
+    sub \ba by \uni066E \ttx1xb ;
+    sub \uni062A by \uni066E \ttx2xa ;
+    sub \uni062B by \uni066E \ttx3xa ;
+    sub \uni0679 by \uni066E \toKecilAtas ;
+    sub \uni067A by \uni066E \ttx2Axa ;
+    sub \uni067B by \uni066E \ttx2Axb ;
+    sub \uni067C by \uni066E \ttx2xa \cincinKecil ;
+    sub \uni067D by \uni066E \ttx3Axa ;
+    sub \uni067E by \uni066E \ttx3Axb ;
+    sub \uni067F by \uni066E \ttx4xa ;
+    sub \uni0680 by \uni066E \ttx4xb ;
+    sub \uni06A2 by \uni06A1 \ttx1xb ;
+    sub \uni06A3 by \uni06A1 \ttx1xa \ttx1xb ;
+    sub \pa by \uni06A1 \ttx3xa ;
+    sub \uni06A5 by \uni06A1 \ttx3Axb ;
+    sub \uni06A6 by \uni06A1 \ttx4xa ;
+    sub \fa by \uni06A1 \ttx1xa ;
+    sub \uni06A7 by \uni066F \ttx1xa ;
+    sub \uni06A8 by \uni066F \ttx3xa ;
+    sub \qaf by \uni066F \ttx2xa ;
+    sub \nga by \ain \ttx3xa ;
+    sub \ghain by \ain \ttx1xa ;
+    sub \uni0686 by \ha_pedas \ttx3Axb ;
+    sub \uni0685 by \ha_pedas \ttx3xa ;
+    sub \uni0681 by \ha_pedas \hamzahKecilAtas ;
+    sub \uni0682 by \ha_pedas \ttx2Axa ;
+    sub \uni0683 by \ha_pedas \ttx2xb ;
+    sub \uni0684 by \ha_pedas \ttx2Axb ;
+    sub \uni0687 by \ha_pedas \ttx4xb ;
+    sub \uni06BF by \ha_pedas \ttx3Axb \ttx1xa ;
+    sub \jim by \ha_pedas \ttx1xb ;
+    sub \kha by \ha_pedas \ttx1xa ;
+    sub \uni0762 by \kaf \ttx1xa ;
+    sub \uni063B by \kaf \ttx2xa ;
+    sub \uni0763 by \kaf \ttx3xa ;
+    sub \uni0764 by \kaf \ttx3xb ;
+    sub \uni063C by \kaf \ttx3Axb ;
+    sub \uni088D by \kaf \ttx2Axb ;
+    sub \uni06AB by \kaf \cincinKecil ;
+    sub \uni06B0 by \kaf \cincinKecil ;
+    sub \uni06B1 by \kaf \ttx2xa ;
+    sub \uni06B2 by \kaf \ttx2xb ;
+    sub \uni06B3 by \kaf \ttx2Axb ;
+    sub \uni06B4 by \kaf \ttx3xa ;
+} ccmpGabungTitik;
+
+lookup SingleSubstitutioninArabiclookupHaBulat {
+  lookupflag RightToLeft IgnoreMarks;
+    sub \ha_bulat by \ha_bulat.isol ;
+} SingleSubstitutioninArabiclookupHaBulat;
+
+lookup isolIsolatedFormsinArabiclookup13 {
+  lookupflag 0;
+    @cc22_match_1 = [\ha_bulat ];
+    @cc22_match_2 = [\ttx2xa ];
+    @cc22_match_3 = [\ha_bulat.isol ];
+    @cc22_back_1 = [\ha_bulat ];
+    @cc22_back_2 = [\ttx2xa ];
+    @cc22_back_3 = [\ha_bulat.isol ];
+    @cc22_ahead_1 = [\ha_bulat ];
+    @cc22_ahead_2 = [\ttx2xa ];
+    @cc22_ahead_3 = [\ha_bulat.isol ];
+    sub @cc22_match_1'lookup SingleSubstitutioninArabiclookupHaBulat  @cc22_ahead_2 ;
+    sub [\hamzah \uni0624 \uni0626 \alif \uni0639.fina \uni062F.fina \uni062F.isol 
+	\ha_pedas.fina \uni06A9.fina \lam.fina \mim.fina \uni0631.fina 
+	\sod.fina \uni0633.fina \uni0637.fina \uni0648.fina \uni0649.fina 
+	\uni06A1.fina \uni06BA.fina \uni066F.fina \lillah \kaf.arab.fina 
+	\kaf.swsh.fina ] [\ha_bulat ]'lookup SingleSubstitutioninArabiclookupHaBulat  ;
+} isolIsolatedFormsinArabiclookup13;
+
+lookup finaTerminalFormsSinglePos {
+  lookupflag RightToLeft;
+    sub \mim by \mim.fina ;
+    sub \ha_bulat by \ha_bulat.fina ;
+    sub \ye_maksurah by \uni0649.fina ;
+} finaTerminalFormsSinglePos;
+
+lookup mediMedialFormsSinglePos {
+  lookupflag RightToLeft;
+    sub \mim by \mim.medi ;
+    sub \ha_bulat by \ha_bulat.medi ;
+    sub \ye_maksurah by \uni066E.medi ;
+} mediMedialFormsSinglePos;
+
+lookup initInitialFormsSinglePos {
+  lookupflag RightToLeft;
+    sub \mim by \mim.init ;
+    sub \ha_bulat by \ha_bulat.init ;
+    sub \ye_maksurah by \uni066E.init ;
+} initInitialFormsSinglePos;
+
+lookup finaArabicTerminalForms {
+  lookupflag RightToLeft;
+    sub \alif by \alif.fina ;
+    sub \ha_pedas by \ha_pedas.fina ;
+    sub \dal by \uni062F.fina ;
+    sub \ra by \uni0631.fina ;
+    sub \sin by \uni0633.fina ;
+    sub \sod by \sod.fina ;
+    sub \ain by \uni0639.fina ;
+    sub \lam by \lam.fina ;
+    sub \wau by \uni0648.fina ;
+    sub \kaf by \uni06A9.fina ;
+    sub \uni066E by \uni066E.fina ;
+    sub \uni06A1 by \uni06A1.fina ;
+    sub \uni06BA by \uni06BA.fina ;
+    sub \uni066F by \uni066F.fina ;
+    sub \uni06A1.ss01 by \uni06A1.ss01.fina ;
+    sub \mim.ss01 by \mim.ss01.fina ;
+    sub \uni0647.ss01 by \uni0647.ss01.fina ;
+    sub \uni0648.ss01 by \uni0648.ss01.fina ;
+    sub \uni066F.ss01 by \uni066F.ss01.fina ;
+    sub \nya by \uni06BA.fina \ttx3xa ;
+    sub \ta_bulat by \ha_bulat.fina \ttx2xa ;
+    sub \kaf.arab by \kaf.arab.fina ;
+    sub \kaf.swsh by \kaf.swsh.fina ;
+} finaArabicTerminalForms;
+
+lookup mediArabicMedialForms {
+  lookupflag RightToLeft;
+    sub \ha_pedas by \ha_pedas.medi ;
+    sub \sin by \uni0633.medi ;
+    sub \sod by \sod.medi ;
+    sub \ain by \uni0639.medi ;
+    sub \lam by \lam.medi ;
+    sub \kaf by \uni06A9.medi ;
+    sub \uni066E by \uni066E.medi ;
+    sub \uni06A1 by \uni06A1.medi ;
+    sub \uni06BA by \uni066E.medi ;
+    sub \uni066F by \uni06A1.medi ;
+    sub \uni06A1.ss01 by \uni06A1.ss01.medi ;
+    sub \mim.ss01 by \mim.ss01.medi ;
+    sub \uni0647.ss01 by \uni0647.ss01.medi ;
+    sub \uni066F.ss01 by \uni066F.ss01.medi ;
+    sub \nya by \uni066E.medi \ttx3Axb ;
+    sub \kaf.arab by \uni06A9.medi ;
+    sub \kaf.swsh by \kaf.swsh.medi ;
+} mediArabicMedialForms;
+
+lookup initInitialFormslookup11 {
+  lookupflag RightToLeft;
+    sub \ha_pedas by \ha_pedas.init ;
+    sub \sin by \uni0633.init ;
+    sub \sod by \sod.init ;
+    sub \ain by \uni0639.init ;
+    sub \lam by \lam.init ;
+    sub \kaf by \uni06A9.init ;
+    sub \uni066E by \uni066E.init ;
+    sub \uni06A1 by \uni06A1.init ;
+    sub \uni06BA by \uni066E.init ;
+    sub \uni066F by \uni06A1.init ;
+    sub \uni06A1.ss01 by \uni06A1.ss01.init ;
+    sub \mim.ss01 by \mim.ss01.init ;
+    sub \uni0647.ss01 by \uni0647.ss01.init ;
+    sub \uni066F.ss01 by \uni066F.ss01.init ;
+    sub \nya by \uni066E.init \ttx3Axb ;
+    sub \kaf.arab by \uni06A9.init ;
+    sub \kaf.swsh by \kaf.swsh.init ;
+} initInitialFormslookup11;
+
+lookup swshKafSwash {
+  lookupflag RightToLeft;
+    sub \kaf by \kaf.swsh ;
+    sub \uni06A9.fina by \kaf.swsh.fina ;
+    sub \uni06A9.init by \kaf.swsh.init ;
+    sub \uni06A9.medi by \kaf.swsh.medi ;
+    sub \kaf.arab by \kaf.swsh ;
+    sub \kaf.arab.fina by \kaf.swsh.fina ;
+    sub \kaf.init_pndk by \padam ;
+    sub \kaf.init_pnjg by \padam ;
+    sub \kaf.medi_pndk by \padam ;
+    sub \kaf.medi_pnjg by \padam ;
+} swshKafSwash;
+
+lookup MultipleSubKafSambunganPendek {
+  lookupflag RightToLeft;
+    sub \uni06A9.init by \uni06A9.init \kaf.init_pndk ;
+    sub \uni06A9.medi by \uni06A9.medi \kaf.medi_pndk ;
+} MultipleSubKafSambunganPendek;
+
+lookup MultipleSubkafSambunganPanjang {
+  lookupflag RightToLeft;
+    sub \uni06A9.init by \uni06A9.init \kaf.init_pnjg ;
+    sub \uni06A9.medi by \uni06A9.medi \kaf.medi_pnjg ;
+} MultipleSubkafSambunganPanjang;
+
+lookup caltKafPanjang {
+  lookupflag RightToLeft;
+    @cc36_match_1 = [\uni06A9.init \uni06A9.medi ];
+    @cc36_match_2 = [\ttx1xa \ttx3xa \ttx2Axa ];
+    @cc36_match_3 = [\uni0639.fina \uni0639.medi \alif.fina \uni062F.fina \ha_bulat.fina 
+	\ha_bulat.medi \ha_pedas.fina \ha_pedas.medi \lam.fina \lam.medi 
+	\lam.medi_lamalif \mim.fina \mim.medi \uni0631.fina \sod.fina 
+	\sod.medi \uni0633.fina \uni0633.medi \uni0637.fina \uni0637.medi 
+	\uni0648.fina \uni0649.fina \uni066E.fina \uni066E.medi 
+	\uni06A1.fina \uni06A1.medi \uni06BA.fina \uni066F.fina 
+	\uni0647.ss01.medi \kaf.arab.fina ];
+    @cc36_match_4 = [\uni06A9.fina ];
+    @cc36_back_1 = [\uni06A9.init \uni06A9.medi ];
+    @cc36_back_2 = [\ttx1xa \ttx3xa \ttx2Axa ];
+    @cc36_back_3 = [\uni0639.fina \uni0639.medi \alif.fina \uni062F.fina \ha_bulat.fina 
+	\ha_bulat.medi \ha_pedas.fina \ha_pedas.medi \lam.fina \lam.medi 
+	\lam.medi_lamalif \mim.fina \mim.medi \uni0631.fina \sod.fina 
+	\sod.medi \uni0633.fina \uni0633.medi \uni0637.fina \uni0637.medi 
+	\uni0648.fina \uni0649.fina \uni066E.fina \uni066E.medi 
+	\uni06A1.fina \uni06A1.medi \uni06BA.fina \uni066F.fina 
+	\uni0647.ss01.medi \kaf.arab.fina ];
+    @cc36_back_4 = [\uni06A9.fina ];
+    @cc36_ahead_1 = [\uni06A9.init \uni06A9.medi ];
+    @cc36_ahead_2 = [\ttx1xa \ttx3xa \ttx2Axa ];
+    @cc36_ahead_3 = [\uni0639.fina \uni0639.medi \alif.fina \uni062F.fina \ha_bulat.fina 
+	\ha_bulat.medi \ha_pedas.fina \ha_pedas.medi \lam.fina \lam.medi 
+	\lam.medi_lamalif \mim.fina \mim.medi \uni0631.fina \sod.fina 
+	\sod.medi \uni0633.fina \uni0633.medi \uni0637.fina \uni0637.medi 
+	\uni0648.fina \uni0649.fina \uni066E.fina \uni066E.medi 
+	\uni06A1.fina \uni06A1.medi \uni06BA.fina \uni066F.fina 
+	\uni0647.ss01.medi \kaf.arab.fina ];
+    @cc36_ahead_4 = [\uni06A9.fina ];
+    sub @cc36_match_1'lookup MultipleSubKafSambunganPendek  @cc36_ahead_3 ;
+    sub @cc36_match_1'lookup MultipleSubKafSambunganPendek  @cc36_ahead_1 ;
+    sub @cc36_match_1'lookup MultipleSubKafSambunganPendek  @cc36_ahead_4 ;
+    @cc37_match_1 = [\uni0639.fina \uni0639.medi \alif.fina \uni062F.fina \ha_bulat.fina 
+	\ha_bulat.medi \ha_pedas.fina \ha_pedas.medi \lam.fina \lam.medi 
+	\lam.medi_lamalif \mim.fina \mim.medi \uni0631.fina \sod.fina 
+	\sod.medi \uni0633.fina \uni0633.medi \uni0637.fina \uni0637.medi 
+	\uni0648.fina \uni0649.fina \uni066E.fina \uni066E.medi 
+	\uni06A1.fina \uni06A1.medi \uni06BA.fina \uni066F.fina 
+	\uni0647.ss01.medi \kaf.arab.fina ];
+    @cc37_match_2 = [\uni06A9.fina ];
+    @cc37_match_3 = [\ttx1xa \ttx3xa \ttx2Axa ];
+    @cc37_match_4 = [\uni06A9.init \uni06A9.medi ];
+    @cc37_back_1 = [\uni0639.fina \uni0639.medi \alif.fina \uni062F.fina \ha_bulat.fina 
+	\ha_bulat.medi \ha_pedas.fina \ha_pedas.medi \lam.fina \lam.medi 
+	\lam.medi_lamalif \mim.fina \mim.medi \uni0631.fina \sod.fina 
+	\sod.medi \uni0633.fina \uni0633.medi \uni0637.fina \uni0637.medi 
+	\uni0648.fina \uni0649.fina \uni066E.fina \uni066E.medi 
+	\uni06A1.fina \uni06A1.medi \uni06BA.fina \uni066F.fina 
+	\uni0647.ss01.medi \kaf.arab.fina ];
+    @cc37_back_2 = [\uni06A9.fina ];
+    @cc37_back_3 = [\ttx1xa \ttx3xa \ttx2Axa ];
+    @cc37_back_4 = [\uni06A9.init \uni06A9.medi ];
+    @cc37_ahead_1 = [\uni0639.fina \uni0639.medi \alif.fina \uni062F.fina \ha_bulat.fina 
+	\ha_bulat.medi \ha_pedas.fina \ha_pedas.medi \lam.fina \lam.medi 
+	\lam.medi_lamalif \mim.fina \mim.medi \uni0631.fina \sod.fina 
+	\sod.medi \uni0633.fina \uni0633.medi \uni0637.fina \uni0637.medi 
+	\uni0648.fina \uni0649.fina \uni066E.fina \uni066E.medi 
+	\uni06A1.fina \uni06A1.medi \uni06BA.fina \uni066F.fina 
+	\uni0647.ss01.medi \kaf.arab.fina ];
+    @cc37_ahead_2 = [\uni06A9.fina ];
+    @cc37_ahead_3 = [\ttx1xa \ttx3xa \ttx2Axa ];
+    @cc37_ahead_4 = [\uni06A9.init \uni06A9.medi ];
+    sub @cc37_match_4'lookup MultipleSubKafSambunganPendek  @cc37_ahead_3 @cc37_ahead_1 ;
+    sub @cc37_match_4'lookup MultipleSubkafSambunganPanjang  @cc37_ahead_3 @cc37_ahead_4 ;
+    sub @cc37_match_4'lookup MultipleSubkafSambunganPanjang  @cc37_ahead_3 @cc37_ahead_2 ;
+} caltKafPanjang;
+
+lookup MultiSubHaPedas {
+  lookupflag 0;
+    sub \ha_pedas.fina by \kasyida_hapedas.fina \ha_pedas.fina ;
+    sub \ha_pedas.medi by \kasyida_hapedas.medi \ha_pedas.medi ;
+} MultiSubHaPedas;
+
+lookup rcltHaPedas {
+  lookupflag IgnoreMarks;
+    @cc40_match_1 = [\ha_pedas.init ];
+    @cc40_match_2 = [\ha_pedas.medi ];
+    @cc40_match_3 = [\ha_pedas.fina ];
+    @cc40_back_1 = [\ha_pedas.init ];
+    @cc40_back_2 = [\ha_pedas.medi ];
+    @cc40_back_3 = [\ha_pedas.fina ];
+    @cc40_ahead_1 = [\ha_pedas.init ];
+    @cc40_ahead_2 = [\ha_pedas.medi ];
+    @cc40_ahead_3 = [\ha_pedas.fina ];
+    sub @cc40_match_1'lookup MultiSubHaPedas  @cc40_ahead_2 ;
+    sub @cc40_match_2'lookup MultiSubHaPedas  @cc40_ahead_2 ;
+    sub @cc40_back_2 @cc40_match_3'lookup MultiSubHaPedas  ;
+} rcltHaPedas;
+
+lookup MultipleSubBa {
+  lookupflag 0;
+    sub \uni066E.init by \uni066E.init \kasyida.1 ;
+    sub \uni066E.medi by \uni066E.medi \kasyida.1 ;
+} MultipleSubBa;
+
+lookup rcltTitikBa {
+  lookupflag 0;
+    @cc41_match_1 = [\uni066E.init ];
+    @cc41_match_2 = [\uni066E.medi \uni066E.medi.1 ];
+    @cc41_match_3 = [\uni066E.fina \uni06BA.fina ];
+    @cc41_match_4 = [\kasyida.1 \kasyida.1.1 ];
+    @cc41_back_1 = [\uni066E.init ];
+    @cc41_back_2 = [\uni066E.medi \uni066E.medi.1 ];
+    @cc41_back_3 = [\uni066E.fina \uni06BA.fina ];
+    @cc41_back_4 = [\kasyida.1 \kasyida.1.1 ];
+    @cc41_ahead_1 = [\uni066E.init ];
+    @cc41_ahead_2 = [\uni066E.medi \uni066E.medi.1 ];
+    @cc41_ahead_3 = [\uni066E.fina \uni06BA.fina ];
+    @cc41_ahead_4 = [\kasyida.1 \kasyida.1.1 ];
+    sub @cc41_match_1'lookup MultipleSubBa  @cc41_ahead_2 ;
+    sub @cc41_match_2'lookup MultipleSubBa  @cc41_ahead_3 ;
+    sub @cc41_back_4 @cc41_match_2'lookup MultipleSubBa  ;
+    sub @cc41_match_1'lookup MultipleSubBa  @cc41_ahead_3 ;
+    @cc42_match_1 = [\uni066E.init ];
+    @cc42_match_2 = [\uni066E.medi \uni066E.medi.1 ];
+    @cc42_match_3 = [\uni066E.fina \uni06BA.fina ];
+    @cc42_match_4 = [\kasyida.1 \kasyida.1.1 ];
+    @cc42_match_5 = [\ttx1xa \ttx1xb \ttx2xa \ttx2xb \ttx3xa \ttx3xb \ttx3Axa \ttx3Axb \ttx4xa \ttx4xb 
+	\ttx2Axa \ttx2Axb ];
+    @cc42_back_1 = [\uni066E.init ];
+    @cc42_back_2 = [\uni066E.medi \uni066E.medi.1 ];
+    @cc42_back_3 = [\uni066E.fina \uni06BA.fina ];
+    @cc42_back_4 = [\kasyida.1 \kasyida.1.1 ];
+    @cc42_back_5 = [\ttx1xa \ttx1xb \ttx2xa \ttx2xb \ttx3xa \ttx3xb \ttx3Axa \ttx3Axb \ttx4xa \ttx4xb 
+	\ttx2Axa \ttx2Axb ];
+    @cc42_ahead_1 = [\uni066E.init ];
+    @cc42_ahead_2 = [\uni066E.medi \uni066E.medi.1 ];
+    @cc42_ahead_3 = [\uni066E.fina \uni06BA.fina ];
+    @cc42_ahead_4 = [\kasyida.1 \kasyida.1.1 ];
+    @cc42_ahead_5 = [\ttx1xa \ttx1xb \ttx2xa \ttx2xb \ttx3xa \ttx3xb \ttx3Axa \ttx3Axb \ttx4xa \ttx4xb 
+	\ttx2Axa \ttx2Axb ];
+    sub @cc42_match_1'lookup MultipleSubBa  @cc42_ahead_5 @cc42_ahead_2 ;
+    sub @cc42_match_2'lookup MultipleSubBa  @cc42_ahead_5 @cc42_ahead_3 ;
+    sub @cc42_back_5 @cc42_match_2' @cc42_match_4'lookup MultipleSubBa  ;
+    sub @cc42_match_2'lookup MultipleSubBa  @cc42_ahead_5 @cc42_ahead_2 ;
+    sub @cc42_match_1'lookup MultipleSubBa  @cc42_ahead_5 @cc42_ahead_3 ;
+} rcltTitikBa;
+
+lookup SingleSubBaTinggi {
+  lookupflag 0;
+    sub \uni066E.medi by \uni066E.medi.1 ;
+} SingleSubBaTinggi;
+
+lookup rcltTinggiBaKosong {
+  lookupflag IgnoreMarks;
+    sub [\uni066E.medi ] [\kasyida.1 ] [\uni066E.medi ]'lookup SingleSubBaTinggi  [\kasyida.1 ]' [\uni066E.fina \uni06BA.fina ] ;
+    sub [\uni066E.medi ] [\kasyida.1 ] [\uni066E.medi ]'lookup SingleSubBaTinggi  [\kasyida.1 ] [\uni066E.medi ] ;
+    sub [\uni066E.init ] [\kasyida.1 ] [\uni066E.medi ] [\kasyida.1 ] [\uni066E.medi ]'lookup SingleSubBaTinggi  [\kasyida.1 ] ;
+} rcltTinggiBaKosong;
+
+lookup SingleSubLamAlifIsol {
+  lookupflag RightToLeft;
+    sub \lam by \lam.init_lamalifisol ;
+    sub \lam.init by \lam.init_lamalifisol ;
+    sub \alif by \alif.fina_lamalifisol ;
+    sub \alif.fina by \alif.fina_lamalifisol ;
+} SingleSubLamAlifIsol;
+
+lookup SingleSubHamzahkehamzahKecilAtas {
+  lookupflag 0;
+    sub \hamzah by \hamzahKecilLamAlif.ccmp ;
+} SingleSubHamzahkehamzahKecilAtas;
+
+lookup SingleSubLamAlifFina {
+  lookupflag RightToLeft;
+    sub \lam.fina by \lam.medi_lamalif ;
+    sub \lam.medi by \lam.medi_lamalif ;
+    sub \alif by \alif.fina_lamalif ;
+    sub \alif.fina by \alif.fina_lamalif ;
+} SingleSubLamAlifFina;
+
+lookup rcltLamHamzahAlif {
+  lookupflag IgnoreMarks;
+    sub [\lam ]'lookup SingleSubLamAlifIsol  [\hamzah ]'lookup SingleSubHamzahkehamzahKecilAtas  [\alif ]'lookup SingleSubLamAlifIsol  ;
+    sub [\lam.fina ]'lookup SingleSubLamAlifFina  [\hamzah ]'lookup SingleSubHamzahkehamzahKecilAtas  [\alif ]'lookup SingleSubLamAlifFina  ;
+} rcltLamHamzahAlif;
+
+lookup caltLamAlifFina {
+  lookupflag RightToLeft IgnoreMarks;
+    @cc54_match_1 = [\lam.medi ];
+    @cc54_match_2 = [\alif.fina ];
+    @cc54_back_1 = [\lam.medi ];
+    @cc54_back_2 = [\alif.fina ];
+    @cc54_ahead_1 = [\lam.medi ];
+    @cc54_ahead_2 = [\alif.fina ];
+    sub @cc54_match_1'lookup SingleSubLamAlifFina  @cc54_match_2'lookup SingleSubLamAlifFina  ;
+} caltLamAlifFina;
+
+lookup caltLamAlifIsol {
+  lookupflag RightToLeft IgnoreMarks;
+    @cc55_match_1 = [\lam.init ];
+    @cc55_match_2 = [\alif.fina ];
+    @cc55_back_1 = [\lam.init ];
+    @cc55_back_2 = [\alif.fina ];
+    @cc55_ahead_1 = [\lam.init ];
+    @cc55_ahead_2 = [\alif.fina ];
+    sub @cc55_match_1'lookup SingleSubLamAlifIsol  @cc55_match_2'lookup SingleSubLamAlifIsol  ;
+} caltLamAlifIsol;
+
+lookup SingleSubHamzah34Naik {
+  lookupflag RightToLeft;
+    sub \hamzah by \hamzahTigaSuku ;
+} SingleSubHamzah34Naik;
+
+lookup rcltHamzah34Naik {
+  lookupflag RightToLeft;
+    sub  \hamzah'lookup SingleSubHamzah34Naik  \ain \ttx3xa  ;
+    sub  \hamzah'lookup SingleSubHamzah34Naik  \uni0639.init \ttx3xa  ;
+    sub  \hamzah'lookup SingleSubHamzah34Naik  \uni06BA \ttx1xa  ;
+    sub  \hamzah'lookup SingleSubHamzah34Naik  \uni066E.init \ttx1xa  ;
+    sub  \hamzah'lookup SingleSubHamzah34Naik  \ye_maksurah \ttx2xb  ;
+    sub  \hamzah'lookup SingleSubHamzah34Naik  \uni066E.init \ttx2xb  ;
+    @cc60_match_1 = [\hamzah \hamzahTigaSuku ];
+    @cc60_match_2 = [\wau ];
+    @cc60_match_3 = [\ZWNJ ];
+    @cc60_back_1 = [\hamzah \hamzahTigaSuku ];
+    @cc60_back_2 = [\wau ];
+    @cc60_back_3 = [\ZWNJ ];
+    @cc60_ahead_1 = [\hamzah \hamzahTigaSuku ];
+    @cc60_ahead_2 = [\wau ];
+    @cc60_ahead_3 = [\ZWNJ ];
+    sub @cc60_match_1'lookup SingleSubHamzah34Naik  @cc60_ahead_2 ;
+    sub @cc60_back_3 @cc60_match_1'lookup SingleSubHamzah34Naik  ;
+} rcltHamzah34Naik;
+
+lookup rcltHamzah34Turun {
+  lookupflag 0;
+    sub [\hamzahTigaSuku ]' [\ZWNJ ]  by [\hamzah ];
+} rcltHamzah34Turun;
+
+lookup ss01StyleSet1inArabiclookup9 {
+  lookupflag 0;
+    sub \mim by \mim.ss01 ;
+    sub \ha_bulat by \uni0647.ss01 ;
+    sub \wau by \uni0648.ss01 ;
+    sub \mim.fina by \mim.ss01.fina ;
+    sub \mim.medi by \mim.ss01.medi ;
+    sub \mim.init by \mim.ss01.init ;
+    sub \uni06A1 by \uni06A1.ss01 ;
+    sub \uni06A1.fina by \uni06A1.ss01.fina ;
+    sub \uni06A1.init by \uni06A1.ss01.init ;
+    sub \uni06A1.medi by \uni06A1.ss01.medi ;
+    sub \uni066F by \uni066F.ss01 ;
+} ss01StyleSet1inArabiclookup9;
+
+feature isol {
+
+ script DFLT;
+     language dflt ;
+      lookup isolMultipleIsolatedFormslookup0;
+      lookup isolIsolatedFormsinArabiclookup13;
+
+ script arab;
+     language dflt ;
+      lookup isolMultipleIsolatedFormslookup0;
+      lookup isolIsolatedFormsinArabiclookup13;
+     language URD  exclude_dflt;
+      lookup isolMultipleIsolatedFormslookup0;
+      lookup isolIsolatedFormsinArabiclookup13;
+
+ script cyrl;
+     language dflt ;
+      lookup isolMultipleIsolatedFormslookup0;
+} isol;
+
+feature ccmp {
+
+ script DFLT;
+     language dflt ;
+      lookup ccmpGabungCincinDot;
+      lookup ccmpGabungBentuk;
+      lookup ccmpGabungTitik;
+
+ script arab;
+     language dflt ;
+      lookup ccmpGabungCincinDot;
+      lookup ccmpGabungBentuk;
+      lookup ccmpGabungTitik;
+     language URD  exclude_dflt;
+      lookup ccmpGabungCincinDot;
+
+ script cyrl;
+     language dflt ;
+      lookup ccmpGabungCincinDot;
+
+ script latn;
+     language dflt ;
+      lookup ccmpGabungBentuk;
+      lookup ccmpGabungTitik;
+} ccmp;
+
+feature calt {
+
+ script DFLT;
+     language dflt ;
+      lookup isolIsolatedFormsinArabiclookup13;
+      lookup caltKafPanjang;
+      lookup rcltHaPedas;
+      lookup rcltTitikBa;
+      lookup rcltTinggiBaKosong;
+      lookup rcltLamHamzahAlif;
+      lookup caltLamAlifFina;
+      lookup caltLamAlifIsol;
+      lookup rcltHamzah34Naik;
+      lookup rcltHamzah34Turun;
+
+ script arab;
+     language dflt ;
+      lookup isolIsolatedFormsinArabiclookup13;
+      lookup caltKafPanjang;
+      lookup rcltHaPedas;
+      lookup rcltTitikBa;
+      lookup rcltTinggiBaKosong;
+      lookup rcltLamHamzahAlif;
+      lookup caltLamAlifFina;
+      lookup caltLamAlifIsol;
+      lookup rcltHamzah34Naik;
+      lookup rcltHamzah34Turun;
+     language URD  exclude_dflt;
+      lookup isolIsolatedFormsinArabiclookup13;
+      lookup caltKafPanjang;
+      lookup rcltHaPedas;
+      lookup rcltTitikBa;
+      lookup rcltTinggiBaKosong;
+      lookup rcltLamHamzahAlif;
+      lookup caltLamAlifFina;
+      lookup caltLamAlifIsol;
+      lookup rcltHamzah34Naik;
+      lookup rcltHamzah34Turun;
+
+ script cyrl;
+     language dflt ;
+      lookup isolIsolatedFormsinArabiclookup13;
+      lookup caltKafPanjang;
+      lookup rcltHaPedas;
+      lookup rcltTitikBa;
+      lookup rcltTinggiBaKosong;
+      lookup rcltLamHamzahAlif;
+      lookup caltLamAlifFina;
+      lookup caltLamAlifIsol;
+      lookup rcltHamzah34Naik;
+      lookup rcltHamzah34Turun;
+} calt;
+
+feature fina {
+
+ script DFLT;
+     language dflt ;
+      lookup finaTerminalFormsSinglePos;
+      lookup finaArabicTerminalForms;
+
+ script arab;
+     language dflt ;
+      lookup finaTerminalFormsSinglePos;
+      lookup finaArabicTerminalForms;
+     language URD  exclude_dflt;
+      lookup finaTerminalFormsSinglePos;
+
+ script latn;
+     language dflt ;
+      lookup finaArabicTerminalForms;
+} fina;
+
+feature medi {
+
+ script DFLT;
+     language dflt ;
+      lookup mediMedialFormsSinglePos;
+      lookup mediArabicMedialForms;
+
+ script arab;
+     language dflt ;
+      lookup mediMedialFormsSinglePos;
+      lookup mediArabicMedialForms;
+     language URD  exclude_dflt;
+      lookup mediMedialFormsSinglePos;
+
+ script latn;
+     language dflt ;
+      lookup mediArabicMedialForms;
+} medi;
+
+feature init {
+
+ script DFLT;
+     language dflt ;
+      lookup initInitialFormsSinglePos;
+      lookup initInitialFormslookup11;
+
+ script arab;
+     language dflt ;
+      lookup initInitialFormsSinglePos;
+      lookup initInitialFormslookup11;
+     language URD  exclude_dflt;
+      lookup initInitialFormsSinglePos;
+
+ script latn;
+     language dflt ;
+      lookup initInitialFormslookup11;
+} init;
+
+feature swsh {
+
+ script DFLT;
+     language dflt ;
+      lookup swshKafSwash;
+
+ script arab;
+     language dflt ;
+      lookup swshKafSwash;
+     language URD  exclude_dflt;
+      lookup swshKafSwash;
+} swsh;
+
+feature rclt {
+
+ script DFLT;
+     language dflt ;
+      lookup caltKafPanjang;
+      lookup rcltHaPedas;
+      lookup rcltTitikBa;
+      lookup rcltTinggiBaKosong;
+      lookup rcltLamHamzahAlif;
+      lookup caltLamAlifFina;
+      lookup caltLamAlifIsol;
+      lookup rcltHamzah34Naik;
+      lookup rcltHamzah34Turun;
+
+ script arab;
+     language dflt ;
+      lookup caltKafPanjang;
+      lookup rcltHaPedas;
+      lookup rcltTitikBa;
+      lookup rcltTinggiBaKosong;
+      lookup rcltLamHamzahAlif;
+      lookup caltLamAlifFina;
+      lookup caltLamAlifIsol;
+      lookup rcltHamzah34Naik;
+      lookup rcltHamzah34Turun;
+     language URD  exclude_dflt;
+      lookup caltKafPanjang;
+      lookup rcltHaPedas;
+      lookup rcltTitikBa;
+      lookup rcltTinggiBaKosong;
+      lookup rcltLamHamzahAlif;
+      lookup caltLamAlifFina;
+      lookup caltLamAlifIsol;
+      lookup rcltHamzah34Naik;
+      lookup rcltHamzah34Turun;
+
+ script cyrl;
+     language dflt ;
+      lookup rcltHaPedas;
+      lookup rcltTitikBa;
+      lookup rcltTinggiBaKosong;
+      lookup rcltLamHamzahAlif;
+      lookup rcltHamzah34Turun;
+} rclt;
+
+feature ss01 {
+  featureNames {
+    name 3 1 0x43e "Muka Creeper";
+    name 3 1 0x409 "Creeper's Face";
+    name 3 1 0x4409 "Muka Creeper / Creeper's Face";
+  };
+
+ script DFLT;
+     language dflt ;
+      lookup ss01StyleSet1inArabiclookup9;
+
+ script arab;
+     language dflt ;
+      lookup ss01StyleSet1inArabiclookup9;
+
+ script latn;
+     language dflt ;
+      lookup ss01StyleSet1inArabiclookup9;
+} ss01;
+
+# GPOS 
+
+
+lookup cursCursiveAttachmentinArabiclookup3 {
+  lookupflag IgnoreMarks;
+    pos cursive \alif.fina_lamalif <anchor 385 220> <anchor NULL>;
+    pos cursive \lam.medi_lamalif <anchor NULL> <anchor 396 232>;
+    pos cursive \lam.init_lamalifisol <anchor NULL> <anchor 62 128>;
+    pos cursive \alif.fina_lamalifisol <anchor 343 129> <anchor NULL>;
+    pos cursive \uni06A9.init <anchor NULL> <anchor 361 204>;
+    pos cursive \kaf.init_pndk <anchor 335 200> <anchor NULL>;
+    pos cursive \kaf.init_pnjg <anchor 675 204> <anchor NULL>;
+    pos cursive \uni06A9.medi <anchor NULL> <anchor 365 204>;
+    pos cursive \kaf.medi_pndk <anchor 391 205> <anchor NULL>;
+    pos cursive \kaf.medi_pnjg <anchor 639 205> <anchor NULL>;
+} cursCursiveAttachmentinArabiclookup3;
+
+lookup markMarkPositioninginArabiclookup0 {
+  lookupflag 0;
+  markClass [\hamzahKecilLamAlif.ccmp ] <anchor -189 982> @hamzahKecil_LamAlif;
+  pos base [\lam.medi_lamalif ] <anchor 368 924> mark @hamzahKecil_LamAlif;
+  pos base [\lam.init_lamalifisol ] <anchor 193 958> mark @hamzahKecil_LamAlif;
+  markClass [\cincinKecil ] <anchor 280 250> @cincin;
+  markClass [\hamzahKecilBawah ] <anchor 200 336> @bawah;
+  markClass [\toKecilBawah ] <anchor 267 456> @bawah;
+  markClass [\tandaVBawah ] <anchor -171 474> @bawah;
+  markClass [\hamzahKecilAtas ] <anchor 194 0> @atas;
+  markClass [\toKecilAtas ] <anchor 277 0> @atas;
+  markClass [\tandaVAtas ] <anchor -166 66> @atas;
+  markClass [\alif_khanjariah ] <anchor 111 -21> @atas;
+  markClass [\tasydid ] <anchor 198 -27> @atas;
+  markClass [\maddah ] <anchor 231 -45> @atas;
+  pos base [\alif ] <anchor 170 1300> mark @atas
+	<anchor 195 -47> mark @bawah;
+  pos base [\ha_pedas ] <anchor 522 872> mark @atas;
+  pos base [\dal ] <anchor 332 799> mark @atas
+	<anchor 429 -105> mark @bawah
+	<anchor 479 -170> mark @cincin;
+  pos base [\ra ] <anchor 238 607> mark @atas
+	<anchor 505 -656> mark @bawah
+	<anchor 350 -685> mark @cincin;
+  pos base [\sin ] <anchor 1214 -160> mark @bawah;
+  pos base [\sod ] <anchor 1639 896> mark @atas
+	<anchor 1639 -184> mark @bawah;
+  pos base [\kasyida ] <anchor 116 -83> mark @bawah
+	<anchor 112 260> mark @atas;
+  pos base [\lam ] <anchor 215 100> mark @atas;
+  pos base [\ha_bulat ] <anchor 451 950> mark @atas;
+  pos base [\ye_maksurah ] <anchor 513 -578> mark @bawah
+	<anchor 919 729> mark @atas;
+  pos base [\kaf ] <anchor 1018 833> mark @cincin;
+  pos base [\alif.fina \alif.fina.1 \alif.fina.2 ] <anchor 129 1465> mark @atas
+	<anchor 209 -117> mark @bawah;
+  pos base [\uni062F.fina ] <anchor 573 789> mark @atas
+	<anchor 450 -115> mark @bawah
+	<anchor 500 -193> mark @cincin;
+  pos base [\uni062F.isol ] <anchor 332 789> mark @atas
+	<anchor 429 -115> mark @bawah
+	<anchor 479 -180> mark @cincin;
+  pos base [\ha_bulat.fina ] <anchor 360 871> mark @atas;
+  pos base [\uni06A9.fina ] <anchor 949 796> mark @cincin;
+  pos base [\uni06A9.init ] <anchor 592 820> mark @cincin;
+  pos base [\uni06A9.medi ] <anchor 462 824> mark @cincin;
+  pos base [\lam.fina ] <anchor 215 89> mark @atas;
+  pos base [\lam.init \lam.medi ] <anchor 345 1189> mark @atas;
+  pos base [\alif.fina_lamalif ] <anchor 18 511> mark @bawah
+	<anchor 0 1135> mark @atas;
+  pos base [\alif.fina_lamalifisol ] <anchor 210 1230> mark @atas
+	<anchor 195 -47> mark @bawah;
+  pos base [\uni0631.fina ] <anchor 257 597> mark @atas
+	<anchor 309 -666> mark @bawah
+	<anchor 154 -695> mark @cincin;
+  pos base [\uni0633.fina ] <anchor 1084 -170> mark @bawah;
+  pos base [\uni0633.init ] <anchor 467 -170> mark @bawah;
+  pos base [\uni0633.medi ] <anchor 435 -170> mark @bawah;
+  pos base [\uni066E ] <anchor 737 -135> mark @cincin;
+  pos base [\uni066E.fina ] <anchor 622 665> mark @atas
+	<anchor 625 -85> mark @bawah
+	<anchor 620 -135> mark @cincin;
+  pos base [\uni066E.init ] <anchor 238 655> mark @atas
+	<anchor 162 -95> mark @bawah
+	<anchor 118 -145> mark @cincin;
+  pos base [\uni066E.medi \uni066E.medi.1 ] <anchor 326 657> mark @atas
+	<anchor 254 -93> mark @bawah
+	<anchor 234 -143> mark @cincin;
+  pos base [\uni06BA ] <anchor 462 451> mark @atas
+	<anchor 459 -574> mark @cincin;
+  pos base [\uni06BA.fina ] <anchor 463 392> mark @atas
+	<anchor 451 -585> mark @cincin;
+  pos base [\uni25CC ] <anchor 475 1088> mark @atas
+	<anchor 475 -93> mark @bawah
+	<anchor 480 500> mark @cincin;
+  pos base [\uni066E.init.2.1 \uni066E.init.2.2 \uni066E.init.2.3 \uni066E.init.2.4 ] <anchor 315 655> mark @atas
+	<anchor 239 -95> mark @bawah
+	<anchor 195 -145> mark @cincin;
+  pos base [\uni066E.medi.2.1 \uni066E.medi.2.2 ] <anchor 448 657> mark @atas
+	<anchor 376 -93> mark @bawah
+	<anchor 356 -143> mark @cincin;
+} markMarkPositioninginArabiclookup0;
+
+lookup abvmTitikAtas {
+  lookupflag RightToLeft MarkAttachmentType @tt_atas;
+  markClass [\ttx1xa ] <anchor 175 0> @titik_atas;
+  markClass [\ttx2xa \ttx3xa ] <anchor 246 0> @titik_atas;
+  markClass [\ttx4xa \ttx3Axa ] <anchor 277 0> @titik_atas;
+  markClass [\ttx2Axa ] <anchor 97 0> @titik_atas;
+  pos base [\ha_pedas ] <anchor 525 645> mark @titik_atas;
+  pos base [\dal ] <anchor 330 845> mark @titik_atas;
+  pos base [\ra ] <anchor 180 655> mark @titik_atas;
+  pos base [\sin ] <anchor 1130 565> mark @titik_atas;
+  pos base [\sod ] <anchor 1295 515> mark @titik_atas;
+  pos base [\to ] <anchor 795 630> mark @titik_atas;
+  pos base [\ain ] <anchor 295 765> mark @titik_atas;
+  pos base [\lam ] <anchor 330 740> mark @titik_atas;
+  pos base [\ha_bulat ] <anchor 360 870> mark @titik_atas;
+  pos base [\wau ] <anchor 290 650> mark @titik_atas;
+  pos base [\kaf ] <anchor 565 852> mark @titik_atas;
+  pos base [\uni0639.fina ] <anchor 365 630> mark @titik_atas;
+  pos base [\uni0639.init ] <anchor 480 715> mark @titik_atas;
+  pos base [\uni0639.medi ] <anchor 390 640> mark @titik_atas;
+  pos base [\uni062F.fina ] <anchor 540 850> mark @titik_atas;
+  pos base [\uni062F.isol ] <anchor 329 835> mark @titik_atas;
+  pos base [\ha_bulat.fina ] <anchor 360 879> mark @titik_atas;
+  pos base [\ha_pedas.fina ] <anchor 500 607> mark @titik_atas;
+  pos base [\ha_pedas.init ] <anchor 498 585> mark @titik_atas;
+  pos base [\ha_pedas.medi ] <anchor 391 670> mark @titik_atas;
+  pos base [\uni06A9.fina ] <anchor 566 862> mark @titik_atas;
+  pos base [\uni06A9.init ] <anchor 145 955> mark @titik_atas;
+  pos base [\uni06A9.medi ] <anchor 145 955> mark @titik_atas;
+  pos base [\lam.fina ] <anchor 330 729> mark @titik_atas;
+  pos base [\lam.init ] <anchor 350 1224> mark @titik_atas;
+  pos base [\lam.medi ] <anchor 300 1229> mark @titik_atas;
+  pos base [\uni0631.fina ] <anchor 225 585> mark @titik_atas;
+  pos base [\sod.fina ] <anchor 1025 529> mark @titik_atas;
+  pos base [\sod.init ] <anchor 598 516> mark @titik_atas;
+  pos base [\sod.medi ] <anchor 600 504> mark @titik_atas;
+  pos base [\uni0633.fina ] <anchor 947 555> mark @titik_atas;
+  pos base [\uni0633.init ] <anchor 482 555> mark @titik_atas;
+  pos base [\uni0633.medi ] <anchor 500 555> mark @titik_atas;
+  pos base [\uni0637.fina ] <anchor 850 620> mark @titik_atas;
+  pos base [\uni0637.init ] <anchor 600 620> mark @titik_atas;
+  pos base [\uni0637.medi ] <anchor 550 620> mark @titik_atas;
+  pos base [\uni0648.fina ] <anchor 250 650> mark @titik_atas;
+  pos base [\uni066E ] <anchor 717 665> mark @titik_atas;
+  pos base [\uni066E.fina ] <anchor 624 614> mark @titik_atas;
+  pos base [\uni066E.init ] <anchor 152 658> mark @titik_atas;
+  pos base [\uni066E.medi \uni066E.medi.1 ] <anchor 250 609> mark @titik_atas;
+  pos base [\uni06A1 ] <anchor 914 878> mark @titik_atas;
+  pos base [\uni06A1.fina ] <anchor 1064 624> mark @titik_atas;
+  pos base [\uni06A1.init ] <anchor 354 830> mark @titik_atas;
+  pos base [\uni06A1.medi ] <anchor 442 663> mark @titik_atas;
+  pos base [\uni06BA ] <anchor 487 429> mark @titik_atas;
+  pos base [\uni06BA.fina ] <anchor 488 370> mark @titik_atas;
+  pos base [\uni066F ] <anchor 636 569> mark @titik_atas;
+  pos base [\uni066F.fina ] <anchor 631 591> mark @titik_atas;
+  pos base [\ha_bulat.isol ] <anchor 198 704> mark @titik_atas;
+  pos base [\kaf.swsh.fina \kaf.swsh.init ] <anchor 211 758> mark @titik_atas;
+  pos base [\kaf.swsh.medi ] <anchor 220 809> mark @titik_atas;
+  pos base [\uni066E.init.2.1 \uni066E.init.2.2 \uni066E.init.2.3 \uni066E.init.2.4 ] <anchor 229 658> mark @titik_atas;
+  pos base [\uni066E.medi.2.1 \uni066E.medi.2.2 ] <anchor 372 609> mark @titik_atas;
+} abvmTitikAtas;
+
+lookup blwmTitikbawah {
+  lookupflag MarkAttachmentType @tt_bawah;
+  markClass [\ttx1xb ] <anchor 118 207> @titik_bawah;
+  markClass [\ttx2xb ] <anchor 244 195> @titik_bawah;
+  markClass [\ttx3xb ] <anchor 246 403> @titik_bawah;
+  markClass [\ttx4xb ] <anchor 227 363> @titik_bawah;
+  markClass [\ttx2Axb ] <anchor 97 486> @titik_bawah;
+  markClass [\ttx3Axb ] <anchor 227 397> @titik_bawah;
+  pos base [\ha_pedas ] <anchor 550 -95> mark @titik_bawah;
+  pos base [\sin ] <anchor 1204 -160> mark @titik_bawah;
+  pos base [\sod ] <anchor 1651 -252> mark @titik_bawah;
+  pos base [\ye_maksurah ] <anchor 650 -620> mark @titik_bawah;
+  pos base [\kaf ] <anchor 437 -132> mark @titik_bawah;
+  pos base [\uni062F.fina ] <anchor 450 -145> mark @titik_bawah;
+  pos base [\uni062F.isol ] <anchor 329 -150> mark @titik_bawah;
+  pos base [\ha_pedas.fina ] <anchor 552 -105> mark @titik_bawah;
+  pos base [\ha_pedas.init ] <anchor 426 -145> mark @titik_bawah;
+  pos base [\ha_pedas.medi ] <anchor 348 -145> mark @titik_bawah;
+  pos base [\uni06A9.fina ] <anchor 536 -117> mark @titik_bawah;
+  pos base [\uni06A9.init ] <anchor 166 -217> mark @titik_bawah;
+  pos base [\uni06A9.medi ] <anchor 340 -269> mark @titik_bawah;
+  pos base [\lam.fina ] <anchor 470 -761> mark @titik_bawah;
+  pos base [\lam.init \lam.medi ] <anchor 240 -161> mark @titik_bawah;
+  pos base [\uni0631.fina ] <anchor 312 -714> mark @titik_bawah;
+  pos base [\uni0633.fina ] <anchor 1074 -170> mark @titik_bawah;
+  pos base [\uni0633.init ] <anchor 457 -170> mark @titik_bawah;
+  pos base [\uni0633.medi ] <anchor 425 -170> mark @titik_bawah;
+  pos base [\uni0649.fina ] <anchor 605 -551> mark @titik_bawah;
+  pos base [\uni066E ] <anchor 694 -85> mark @titik_bawah;
+  pos base [\uni066E.fina ] <anchor 620 -135> mark @titik_bawah;
+  pos base [\uni066E.init ] <anchor 188 -145> mark @titik_bawah;
+  pos base [\uni066E.medi \uni066E.medi.1 ] <anchor 304 -143> mark @titik_bawah;
+  pos base [\uni06BA ] <anchor 470 -510> mark @titik_bawah;
+  pos base [\uni06BA.fina ] <anchor 462 -521> mark @titik_bawah;
+  pos base [\kaf.swsh.fina \kaf.swsh.init ] <anchor 967 -122> mark @titik_bawah;
+  pos base [\kaf.swsh.medi ] <anchor 872 -123> mark @titik_bawah;
+  pos base [\uni066E.init.2.1 \uni066E.init.2.2 \uni066E.init.2.3 \uni066E.init.2.4 ] <anchor 265 -145> mark @titik_bawah;
+  pos base [\uni066E.medi.2.1 \uni066E.medi.2.2 ] <anchor 426 -143> mark @titik_bawah;
+} blwmTitikbawah;
+
+lookup SinglePositioningTitikNaik50 {
+  lookupflag RightToLeft;
+    pos \ttx4xb <0 50 0 0>;
+    pos \ttx3Axb <0 50 0 0>;
+} SinglePositioningTitikNaik50;
+
+lookup SinglePositioningTitikNaik100 {
+  lookupflag RightToLeft;
+    pos \ttx4xb <0 100 0 0>;
+    pos \ttx3Axb <0 100 0 0>;
+} SinglePositioningTitikNaik100;
+
+lookup caltContextualAlternateslookup3 {
+  lookupflag 0;
+    pos [\ha_pedas.fina ] [\ttx3Axb ]'lookup SinglePositioningTitikNaik50  ;
+    pos [\ha_pedas ] [\ttx3Axb ]'lookup SinglePositioningTitikNaik100  ;
+    @cc78_match_1 = [\ha_pedas.fina ];
+    @cc78_match_2 = [\ha_pedas.medi ];
+    @cc78_match_3 = [\ha_pedas.init ];
+    @cc78_match_4 = [\ha_pedas ];
+    @cc78_match_5 = [\ttx4xb ];
+    @cc78_back_1 = [\ha_pedas.fina ];
+    @cc78_back_2 = [\ha_pedas.medi ];
+    @cc78_back_3 = [\ha_pedas.init ];
+    @cc78_back_4 = [\ha_pedas ];
+    @cc78_back_5 = [\ttx4xb ];
+    @cc78_ahead_1 = [\ha_pedas.fina ];
+    @cc78_ahead_2 = [\ha_pedas.medi ];
+    @cc78_ahead_3 = [\ha_pedas.init ];
+    @cc78_ahead_4 = [\ha_pedas ];
+    @cc78_ahead_5 = [\ttx4xb ];
+    pos @cc78_back_1 @cc78_match_5'lookup SinglePositioningTitikNaik50  ;
+    pos @cc78_back_4 @cc78_match_5'lookup SinglePositioningTitikNaik100  ;
+} caltContextualAlternateslookup3;
+
+lookup SinglePosTitikKeKiri70 {
+  lookupflag 0;
+    pos \ttx2xb <-70 0 0 0>;
+    pos \ttx4xb <-70 0 0 0>;
+    pos \ttx3Axb <-70 0 0 0>;
+} SinglePosTitikKeKiri70;
+
+lookup rcltTitikYadanSaudaranya {
+  lookupflag 0;
+    pos [\kasyida.1 ] [\ttx2xa \ttx2xb \ttx3xa \ttx3xb \ttx3Axa \ttx3Axb \ttx4xa \ttx4xb ] [\uni066E.medi ] [\kasyida.1 ] [\ttx2xa \ttx2xb \ttx3xa \ttx3xb \ttx3Axa \ttx3Axb \ttx4xa \ttx4xb ]'lookup SinglePosTitikKeKiri70  ;
+} rcltTitikYadanSaudaranya;
+
+lookup rcltTitikYadanSaudaranya2 {
+  lookupflag 0;
+    pos [\ttx2xa \ttx2xb \ttx3xa \ttx3xb \ttx3Axa \ttx3Axb \ttx4xa \ttx4xb ] [\uni066E.medi ] [\ttx2xa \ttx2xb \ttx3xa \ttx3xb \ttx3Axa \ttx3Axb \ttx4xa \ttx4xb ]'lookup SinglePosTitikKeKiri70  ;
+} rcltTitikYadanSaudaranya2;
+
+feature curs {
+
+ script DFLT;
+     language dflt ;
+      lookup cursCursiveAttachmentinArabiclookup3;
+
+ script arab;
+     language dflt ;
+      lookup cursCursiveAttachmentinArabiclookup3;
+     language URD  exclude_dflt;
+      lookup cursCursiveAttachmentinArabiclookup3;
+} curs;
+
+feature mark {
+
+ script DFLT;
+     language dflt ;
+      lookup markMarkPositioninginArabiclookup0;
+
+ script arab;
+     language dflt ;
+      lookup markMarkPositioninginArabiclookup0;
+     language URD  exclude_dflt;
+      lookup markMarkPositioninginArabiclookup0;
+} mark;
+
+feature abvm {
+
+ script DFLT;
+     language dflt ;
+      lookup abvmTitikAtas;
+
+ script arab;
+     language dflt ;
+      lookup abvmTitikAtas;
+     language URD  exclude_dflt;
+      lookup abvmTitikAtas;
+
+ script cyrl;
+     language dflt ;
+      lookup abvmTitikAtas;
+} abvm;
+
+feature blwm {
+
+ script DFLT;
+     language dflt ;
+      lookup blwmTitikbawah;
+
+ script arab;
+     language dflt ;
+      lookup blwmTitikbawah;
+     language URD  exclude_dflt;
+      lookup blwmTitikbawah;
+
+ script cyrl;
+     language dflt ;
+      lookup blwmTitikbawah;
+} blwm;
+
+feature calt {
+
+ script DFLT;
+     language dflt ;
+      lookup caltContextualAlternateslookup3;
+      lookup rcltTitikYadanSaudaranya;
+      lookup rcltTitikYadanSaudaranya2;
+
+ script arab;
+     language dflt ;
+      lookup caltContextualAlternateslookup3;
+      lookup rcltTitikYadanSaudaranya;
+      lookup rcltTitikYadanSaudaranya2;
+     language URD  exclude_dflt;
+      lookup caltContextualAlternateslookup3;
+      lookup rcltTitikYadanSaudaranya;
+      lookup rcltTitikYadanSaudaranya2;
+
+ script cyrl;
+     language dflt ;
+      lookup caltContextualAlternateslookup3;
+      lookup rcltTitikYadanSaudaranya;
+      lookup rcltTitikYadanSaudaranya2;
+} calt;
+
+feature rclt {
+
+ script DFLT;
+     language dflt ;
+      lookup caltContextualAlternateslookup3;
+      lookup rcltTitikYadanSaudaranya;
+      lookup rcltTitikYadanSaudaranya2;
+
+ script arab;
+     language dflt ;
+      lookup caltContextualAlternateslookup3;
+      lookup rcltTitikYadanSaudaranya;
+      lookup rcltTitikYadanSaudaranya2;
+     language URD  exclude_dflt;
+      lookup caltContextualAlternateslookup3;
+      lookup rcltTitikYadanSaudaranya;
+      lookup rcltTitikYadanSaudaranya2;
+
+ script cyrl;
+     language dflt ;
+      lookup rcltTitikYadanSaudaranya;
+      lookup rcltTitikYadanSaudaranya2;
+
+ script latn;
+     language dflt ;
+      lookup caltContextualAlternateslookup3;
+} rclt;
+#Mark attachment classes (defined in GDEF, used in lookupflags)
+@tt_atas = [ ttx1xa ttx2xa ttx3xa ttx3Axa ttx4xa ttx2Axa ];
+@tt_bawah = [ ttx1xb ttx2xb ttx3xb ttx3Axb ttx4xb ttx2Axb ];
+@bt_atawah = [ cincinKecil ];
+@bt_atas = [ toKecilAtas ];
+@bt_bawah = [ toKecilBawah ];
+
+@GDEF_Simple = [\uni0000 \uni000D \space \hamzah \alif-hamzahAtas \uni0624 
+	\alif-hamzahBawah \uni0626 \alif \ha_pedas \dal \ra \sin \sod \to \ain \kasyida 
+	\lam \mim \ha_bulat \wau \ye_maksurah \ya \hamzahTigaSuku \kaf \uni0639.fina 
+	\uni0639.init \uni0639.medi \alif.fina \uni062F.fina \uni062F.isol 
+	\ha_bulat.fina \ha_bulat.init \ha_bulat.medi \ha_pedas.fina \ha_pedas.init 
+	\ha_pedas.medi \uni06A9.fina \uni06A9.init \uni06A9.medi \lam.fina \lam.init 
+	\lam.medi \lam.medi_lamalif \lam.init_lamalifisol \uniFEF8 
+	\lamalifhamzahatas.isol \uniFEFA \lamalifhamzahbawah.isol \mim.fina 
+	\mim.medi \mim.init \uni0631.fina \sod.fina \sod.init \sod.medi \uni0633.fina 
+	\uni0633.init \uni0633.medi \uni0637.fina \uni0637.init \uni0637.medi 
+	\uni0648.fina \uni0649.fina \uni066E \uni066E.fina \uni066E.init 
+	\uni066E.medi \uni06A1 \uni06A1.fina \uni06A1.init \uni06A1.medi \uni06BA 
+	\uni06BA.fina \uni066F \uni066F.fina \uni0762 \NameMe.99 \uni25CC 
+	\uni06A1.ss01 \uni06A1.ss01.fina \uni06A1.ss01.init \uni06A1.ss01.medi 
+	\mim.ss01 \mim.ss01.fina \mim.ss01.medi \mim.ss01.init \uni0647.ss01 
+	\uni0647.ss01.fina \uni0647.ss01.medi \uni0647.ss01.init \uni0648.ss01 
+	\uni0648.ss01.fina \uni0639.ss01.fina \uni0639.ss01.medi \uni066F.ss01 
+	\uni066F.ss01.fina \uni066F.ss01.medi \uni066F.ss01.init \alif_khanjariah 
+	\uni0686 \uni063B \uni0763 \uni0685 \uni0764 \uni063C \uni088D \ba \uni062A 
+	\uni062B \uni0679 \uni067A \uni067B \uni067C \uni067D \uni067E \uni067F \uni0680 
+	\uni0681 \uni0682 \uni0683 \uni0684 \uni0687 \uni0688 \uni0689 \uni068A \uni068B 
+	\uni068C \uni068D \uni068E \uni068F \uni0690 \uni0691 \uni0692 \uni0693 \uni0694 
+	\uni0695 \uni0696 \uni0697 \uni0698 \uni0699 \uni069A \uni069B \uni069C \uni069D 
+	\uni069E \uni069F \nga \uni06A2 \uni06A3 \pa \uni06A5 \uni06A6 \uni06A7 \uni06A8 
+	\uni06AB \uni06B0 \uni06B1 \uni06B2 \uni06B3 \uni06B4 \uni06B5 \uni06B6 \uni06B7 
+	\uni06B8 \uni06B9 \uni06BB \uni06BC \nya \uni06BF \ta_bulat \jim \kha \zal \zai 
+	\syin \dod \za \ghain \fa \qaf \nun \alif.1 \alif.2 \uni066E.init1 \alif.fina.1 
+	\alif.fina.2 \lillah \ha_bulat.isol \ZWJ \ZWNJ \kaf.arab \kaf.arab.fina 
+	\kaf.init_pndk \kaf.init_pnjg \kaf.medi_pndk \kaf.medi_pnjg \padam \uniFEFB 
+	\uniFEFC \kaf.swsh \kaf.swsh.fina \kaf.swsh.medi \kaf.swsh.init 
+	\dua.arab_naik \NameMe.7 \va \NameMe.125 \NameMe.126 \NameMe.129 \zero \one \two 
+	\three \four \five \six \seven \eight \nine \satu.arab \dua.arab \tiga.arab 
+	\empat.arab \lima.arab \enam.arab \tujuh.arab \lapan.arab \sembilan.arab 
+	\kasyida.0 \kasyida.1 \kasyida.1.1 \uni066E.medi.1 \uni066E.init.2.1 
+	\uni066E.init.2.2 \uni066E.init.2.3 \uni066E.init.2.4 \uni066E.medi.2.1 
+	\uni066E.medi.2.2 \kasyida_hapedas.fina \kasyida_hapedas.medi 
+	\lamAlif_hamzahKecil ];
+@GDEF_Ligature = [\alif.fina_lamalifisol \uniFEF9 ];
+@GDEF_Mark = [\ttx1xb \ttx2xb \ttx3xb \ttx4xb \ttx2Axb \ttx3Axb \hamzahKecilAtas 
+	\hamzahKecilBawah \ttx1xa \ttx2xa \ttx3xa \ttx4xa \ttx2Axa \ttx3Axa 
+	\toKecilBawah \toKecilAtas \cincinKecil \tandaVAtas \tandaVBawah \tasydid 
+	\maddah \NameMe.97 \hamzahKecilLamAlif.ccmp ];
+@GDEF_Component = [\alif.fina_lamalif ];
+
+table GDEF {
+  GlyphClassDef @GDEF_Simple, @GDEF_Ligature, @GDEF_Mark, @GDEF_Component;
+
+  LigatureCaretByPos \alif.fina_lamalif 354;
+} GDEF;
+

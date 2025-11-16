@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="kaf.medi_pndk" format="2">
+  <advance width="418"/>
+  <anchor x="391" y="205.004" name="_kaf_medi"/>
+  <outline>
+    <contour>
+      <point x="389.518" y="204.594" type="curve"/>
+      <point x="395.848" y="232.111"/>
+      <point x="409.568" y="194.319"/>
+      <point x="412.399" y="179.42" type="curve" smooth="yes"/>
+      <point x="434.162" y="112.93"/>
+      <point x="353.635" y="29.8662"/>
+      <point x="344.19" y="20.3828" type="curve" smooth="yes"/>
+      <point x="324.128" y="0.249023"/>
+      <point x="311.361" y="0"/>
+      <point x="12.7559" y="0" type="curve" smooth="yes"/>
+      <point x="1.37207" y="0" type="line" smooth="yes"/>
+      <point x="-37.1641" y="0"/>
+      <point x="-68.4023" y="31.2402"/>
+      <point x="-68.4023" y="69.7754" type="curve" smooth="yes"/>
+      <point x="-68.4023" y="70.2246" type="line" smooth="yes"/>
+      <point x="-68.4023" y="108.761"/>
+      <point x="-37.1641" y="140"/>
+      <point x="1.37207" y="140" type="curve" smooth="yes"/>
+      <point x="12.7559" y="140" type="line"/>
+      <point x="12.7559" y="139.617" type="line"/>
+      <point x="173.839" y="134.438"/>
+      <point x="361.716" y="137.91"/>
+      <point x="381.69" y="157.883" type="curve" smooth="yes"/>
+      <point x="394.136" y="170.329"/>
+      <point x="395.512" y="198.597"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.fontlab.hintData</key>
+      <dict>
+        <key>hhints</key>
+        <array>
+          <dict>
+            <key>position</key>
+            <integer>0</integer>
+            <key>width</key>
+            <integer>140</integer>
+          </dict>
+        </array>
+        <key>vhints</key>
+        <array>
+          <dict>
+            <key>position</key>
+            <integer>390</integer>
+            <key>width</key>
+            <integer>23</integer>
+          </dict>
+        </array>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

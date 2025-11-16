@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="alif.fina.2" format="2">
+  <advance width="210"/>
+  <anchor x="129" y="1465" name="atas"/>
+  <anchor x="209" y="-116.996" name="bawah"/>
+  <outline>
+    <contour>
+      <point x="161.278" y="990.602" type="line"/>
+      <point x="147.967" y="987.381" type="line"/>
+      <point x="147.967" y="987.381"/>
+      <point x="45.8857" y="774.847"/>
+      <point x="48.3008" y="760.957" type="curve" smooth="yes"/>
+      <point x="69.8477" y="546.091"/>
+      <point x="126.862" y="0"/>
+      <point x="126.862" y="0" type="curve"/>
+      <point x="210" y="0" type="line"/>
+    </contour>
+  </outline>
+</glyph>

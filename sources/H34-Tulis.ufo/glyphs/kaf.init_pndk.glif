@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="kaf.init_pndk" format="2">
+  <advance width="404"/>
+  <anchor x="334.636" y="200.393" name="_kaf_init"/>
+  <outline>
+    <contour>
+      <point x="332.455" y="204.594" type="curve"/>
+      <point x="331.355" y="226.845"/>
+      <point x="397.634" y="225.038"/>
+      <point x="394.288" y="198.126" type="curve" smooth="yes"/>
+      <point x="384.707" y="148.156"/>
+      <point x="354.731" y="88.2793"/>
+      <point x="287.123" y="20.3828" type="curve" smooth="yes"/>
+      <point x="268.524" y="1.7041"/>
+      <point x="71.3652" y="0"/>
+      <point x="0" y="0" type="curve" smooth="yes"/>
+      <point x="-38.5352" y="0"/>
+      <point x="-69.7734" y="31.2402"/>
+      <point x="-69.7734" y="69.7754" type="curve" smooth="yes"/>
+      <point x="-69.7734" y="70.2246" type="line" smooth="yes"/>
+      <point x="-69.7734" y="108.761"/>
+      <point x="-38.5352" y="140"/>
+      <point x="0" y="140" type="curve" smooth="yes"/>
+      <point x="0" y="140"/>
+      <point x="305.092" y="138.348"/>
+      <point x="324.628" y="157.883" type="curve" smooth="yes"/>
+      <point x="337.073" y="170.328"/>
+      <point x="338.445" y="198.597"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.fontlab.hintData</key>
+      <dict>
+        <key>hhints</key>
+        <array>
+          <dict>
+            <key>position</key>
+            <integer>0</integer>
+            <key>width</key>
+            <integer>140</integer>
+          </dict>
+        </array>
+        <key>vhints</key>
+        <array>
+          <dict>
+            <key>position</key>
+            <integer>332</integer>
+            <key>width</key>
+            <integer>62</integer>
+          </dict>
+        </array>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

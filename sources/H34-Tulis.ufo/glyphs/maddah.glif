@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="maddah" format="2">
+  <advance width="476"/>
+  <unicode hex="0653"/>
+  <anchor x="231" y="-45" name="_atas"/>
+  <outline>
+    <contour>
+      <point x="462.144" y="190.283" type="curve" smooth="yes"/>
+      <point x="464.025" y="190.378"/>
+      <point x="465.896" y="182.762"/>
+      <point x="458.537" y="171.924" type="curve" smooth="yes"/>
+      <point x="438.513" y="142.432"/>
+      <point x="337.29" y="42.2832"/>
+      <point x="250.143" y="42.2832" type="curve" smooth="yes"/>
+      <point x="188.143" y="42.2832"/>
+      <point x="131.477" y="59.9502"/>
+      <point x="80.1426" y="95.2832" type="curve"/>
+      <point x="52.2236" y="39.4443"/>
+      <point x="39.6748" y="13.5957"/>
+      <point x="28.5371" y="0.807617" type="curve" smooth="yes"/>
+      <point x="21.707" y="-7.03613"/>
+      <point x="1.73242" y="-20.4199"/>
+      <point x="9" y="0" type="curve" smooth="yes"/>
+      <point x="25.5283" y="46.4434"/>
+      <point x="83.3896" y="162.412"/>
+      <point x="93.1406" y="175.283" type="curve"/>
+      <point x="141.81" y="141.74"/>
+      <point x="195.879" y="114.283"/>
+      <point x="256.141" y="114.283" type="curve" smooth="yes"/>
+      <point x="342.011" y="114.283"/>
+      <point x="431.643" y="188.758"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.fontlab.hintData</key>
+      <dict>
+        <key>hhints</key>
+        <array>
+          <dict>
+            <key>position</key>
+            <integer>42</integer>
+            <key>width</key>
+            <integer>72</integer>
+          </dict>
+        </array>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

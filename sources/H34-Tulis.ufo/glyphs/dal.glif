@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="dal" format="2">
+  <advance width="723"/>
+  <unicode hex="062F"/>
+  <anchor x="330" y="845" name="titik_atas"/>
+  <anchor x="332" y="799" name="atas"/>
+  <anchor x="429" y="-105" name="bawah"/>
+  <anchor x="479" y="-170" name="cincin"/>
+  <outline>
+    <contour>
+      <point x="650.408" y="213.605" type="curve" smooth="yes"/>
+      <point x="640.83" y="162.917"/>
+      <point x="632.217" y="112.053"/>
+      <point x="621.407" y="61.6055" type="curve"/>
+      <point x="570.013" y="27.5322"/>
+      <point x="191.845" y="-9.29492"/>
+      <point x="70.4092" y="21.6055" type="curve"/>
+      <point x="103.34" y="135.369"/>
+      <point x="72.8691" y="33.4189"/>
+      <point x="112.407" y="173.605" type="curve"/>
+      <point x="254.2" y="152.152"/>
+      <point x="418.556" y="161.872"/>
+      <point x="582.41" y="186.605" type="curve"/>
+      <point x="583.601" y="191.551"/>
+      <point x="621.411" y="357.607"/>
+      <point x="369.407" y="546.605" type="curve"/>
+      <point x="368.852" y="607.833"/>
+      <point x="385.397" y="669.564"/>
+      <point x="397.41" y="729.605" type="curve"/>
+      <point x="458.888" y="687.448"/>
+      <point x="515.252" y="618.328"/>
+      <point x="542.408" y="577.605" type="curve" smooth="yes"/>
+      <point x="602.479" y="487.521"/>
+      <point x="665.159" y="331.62"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.fontlab.hintData</key>
+      <dict>
+        <key>hhints</key>
+        <array>
+          <dict>
+            <key>position</key>
+            <integer>22</integer>
+            <key>width</key>
+            <integer>152</integer>
+          </dict>
+        </array>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uni066E.medi" format="2">
+  <advance width="342"/>
+  <anchor x="250.156" y="608.715" name="titik_atas"/>
+  <anchor x="304.156" y="-143.285" name="titik_bawah"/>
+  <anchor x="326.156" y="656.715" name="atas"/>
+  <anchor x="254.156" y="-93.2852" name="bawah"/>
+  <anchor x="234.156" y="-143.285" name="cincin"/>
+  <outline>
+    <contour>
+      <point x="428.047" y="409.049" type="line"/>
+      <point x="414.958" y="409.049"/>
+      <point x="330.947" y="338.95"/>
+      <point x="310.235" y="288.078" type="curve"/>
+      <point x="307.124" y="252.589"/>
+      <point x="285.431" y="140.782"/>
+      <point x="260.693" y="140" type="curve" smooth="yes"/>
+      <point x="260.613" y="140"/>
+      <point x="260.504" y="140"/>
+      <point x="260.428" y="140" type="curve" smooth="yes"/>
+      <point x="24.4199" y="140" type="line"/>
+      <point x="0" y="140" type="line"/>
+      <point x="-32.5527" y="107.441" type="line"/>
+      <point x="-32.5527" y="0" type="line"/>
+      <point x="24.4199" y="0" type="line"/>
+      <point x="244.688" y="0" type="line"/>
+      <point x="264.737" y="20.0508"/>
+      <point x="341.911" y="128.842"/>
+      <point x="348.355" y="139.998" type="curve" smooth="yes"/>
+      <point x="373.553" y="183.646"/>
+      <point x="429.771" y="310.553"/>
+      <point x="429.771" y="407.486" type="curve" smooth="yes"/>
+      <point x="429.771" y="408.579"/>
+      <point x="429.116" y="409.051"/>
+      <point x="428.043" y="409.051" type="curve"/>
+    </contour>
+  </outline>
+</glyph>

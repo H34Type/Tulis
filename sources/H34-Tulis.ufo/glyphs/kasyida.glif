@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="kasyida" format="2">
+  <advance width="229"/>
+  <unicode hex="0640"/>
+  <anchor x="116" y="-83" name="bawah"/>
+  <anchor x="112" y="260" name="atas"/>
+  <outline>
+    <contour>
+      <point x="0" y="140" type="line"/>
+      <point x="-32.5527" y="107.441" type="line"/>
+      <point x="-32.5527" y="0" type="line"/>
+      <point x="24.4199" y="0" type="line"/>
+      <point x="204.58" y="0" type="line"/>
+      <point x="229" y="0" type="line"/>
+      <point x="261.553" y="32.5586" type="line"/>
+      <point x="261.553" y="140" type="line"/>
+      <point x="204.58" y="140" type="line"/>
+      <point x="24.4199" y="140" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.fontlab.hintData</key>
+      <dict>
+        <key>hhints</key>
+        <array>
+          <dict>
+            <key>position</key>
+            <integer>0</integer>
+            <key>width</key>
+            <integer>140</integer>
+          </dict>
+        </array>
+        <key>vhints</key>
+        <array>
+          <dict>
+            <key>position</key>
+            <integer>-33</integer>
+            <key>width</key>
+            <integer>294</integer>
+          </dict>
+        </array>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

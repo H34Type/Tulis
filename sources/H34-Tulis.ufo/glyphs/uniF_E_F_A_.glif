@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uniFEFA" format="2">
+  <advance width="882"/>
+  <unicode hex="FEFA"/>
+  <lib>
+    <dict>
+      <key>com.fontlab.hintData</key>
+      <dict>
+        <key>hhints</key>
+        <array>
+          <dict>
+            <key>position</key>
+            <integer>-963</integer>
+            <key>width</key>
+            <integer>94</integer>
+          </dict>
+          <dict>
+            <key>position</key>
+            <integer>-773</integer>
+            <key>width</key>
+            <integer>94</integer>
+          </dict>
+          <dict>
+            <key>position</key>
+            <integer>11</integer>
+            <key>width</key>
+            <integer>140</integer>
+          </dict>
+        </array>
+        <key>vhints</key>
+        <array>
+          <dict>
+            <key>position</key>
+            <integer>68</integer>
+            <key>width</key>
+            <integer>140</integer>
+          </dict>
+        </array>
+      </dict>
+    </dict>
+  </lib>
+</glyph>
