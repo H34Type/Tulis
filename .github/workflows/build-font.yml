@@ -143,7 +143,7 @@ jobs:
       with:
         name: font-files-${{ github.run_number }}-${{ inputs.build_type }}
         path: |
-          *.otf
+          master_otf/*.otf
           ${{ env.UFO_FILE }}/
         retention-days: 30
 
