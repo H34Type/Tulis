@@ -22,7 +22,6 @@ env:
   UFO_FILE: "sources/H34-Tulis.ufo"
   VENV_DIR: "build/bin"
   FEA_DIR: "fea"
-  REQUIREMENTS_FILE: "requirements.txt"
 
 jobs:
   build:
@@ -50,7 +49,7 @@ jobs:
     - name: Install Python dependencies
       run: |
         source ${{ env.VENV_DIR }}/activate
-        pip install fontmake silfont
+        pip install fontmake silfont setuptools
 
     # ------------------------------------------------------------------
     # STEP 1: Convert SFD → UFO
